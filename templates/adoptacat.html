@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-image: url('pastelbluebg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .dog {
+            display: inline-block;
+            width: 28%;
+            background: #ffebcd;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dog:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 6px 16px rgba(0,0,0,0.4);
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+            border: 3px solid paleturquoise;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: darkblue;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        p {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #444;
+        }
+        a {
+            font-size: 1.5em;
+            color: darkblue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <h1><i><B>Choose your Cat</B></i></h1>
+    
+
+    <div class="container">
+        
+        <div class="dog"><img src="{{ url_for('static', filename='blue_persian_cat.jpeg') }}" alt="Buddy"><h3>Noodle</h3><p>Age: 3 years</p><h2><p></p></h2></div>
+        <div class="dog"><img src="{{ url_for('static', filename='tabbycat.jpg') }}" alt="Charlie"><h3>Snickers</h3><p>Age: 2 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='cat5.jpg') }}" alt="Max"><h3>Munchkin</h3><p>Age: 4 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='white cat.webp') }}" alt="Bella"><h3>Muffin</h3><p>Age: 1 year</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='cat7.jpg') }}" alt="Lucy"><h3>Pudding</h3><p>Age: 1 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='car8.jpg') }}" alt="Daisy"><h3>Mochi</h3><p>Age: 3 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='cat8.jpeg') }}" alt="Rocky"><h3>Poppy</h3><p>Age: 5 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='cat9.png') }}" alt="Copper"><h3>Cuuro</h3><p>Age: 4 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='cat10.jpg') }}" alt="bailey"><h3>Nanako</h3><p>Age: 2 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='CAT6.jpg') }}" alt="Miloo"><h3>Squeky</h3><p>Age: 3 years</p></div>
+    </div>
+</body>
+</html>
+
+

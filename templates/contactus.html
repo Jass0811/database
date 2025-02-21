@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pawfriend - Contact Us</title>
+    <style>
+        body {
+            font-family: cursive;
+            background-color: #aec6cf; /* Pastel Blue */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .wrapper {
+            display: flex;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            max-width: 900px;
+            width: 100%;
+        }
+        .image-section {
+            background: url('{{ url_for("static", filename="contactusdog.webp") }}') no-repeat center center;
+            background-size: cover;
+            width: 40%;
+            
+            border-radius: 10px;
+        }
+
+        .container {
+            padding: 30px;
+            text-align: left;
+            width: 60%;
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: bold;
+            font-family: cursive;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p, label {
+            font-size: 16px;
+            color: #333;
+        }
+        .faq-section {
+            margin-top: 20px;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .faq-question:hover {
+            background-color: #e0efff;
+        }
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 3px solid #aec6cf;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-section"></div>
+        <div class="container">
+           <h1><div class="logo">Perfect Pawfriend</div></h1>
+            <p>Contact Us</p>
+            <p><strong>Note:</strong> If you have a question about a specific pet or policies at a shelter, please contact them directly. Asking Perfect Pawfriend will delay your search for a pet, as each shelter manages its own pet list and information.</p>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">ARE YOU LOOKING FOR A NEW PET?</div>
+                    <div class="faq-answer">Perfect Pawfriend is a searchable list of pets from thousands of shelters and foster groups. Start your search using our Pet Search. You can also search by using our Breed List.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">ARE YOU A SHELTER/PLACEMENT GROUP THAT NEEDS ASSISTANCE?</div>
+                    <div class="faq-answer">We have specially trained staff dedicated to answering questions from shelter workers and placement groups. Please contact us for assistance.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleAnswer(this)">DO YOU WANT MORE INFORMATION ABOUT A PET YOU'VE SEEN ON PERFECT PAWFRIEND?</div>
+                    <div class="faq-answer">Please directly contact the animal welfare organization that is caring for the pet. This information can be found on the group's home page or under the pet's picture on their description page.</div>
+                    <div class="faq-question" onclick="toggleAnswer(this)">Do you have concerns regarding the health or safety of a listed pet?</div>
+                    <div class="faq-answer">Perfect Pawfriend is a website for nearly 13,000 independent animal shelters and rescue groups to post their adoptable pets.   If you are concerned about the welfare of any animal, you may want to consider contacting your local authorities for assistance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+            } else {
+                answer.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

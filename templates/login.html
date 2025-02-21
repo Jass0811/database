@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pawfriend - Login</title>
+    <style>
+        body {
+            font-family:cursive;
+            background-color: #fef5f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .wrapper {
+            display: flex;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            width: 850px;
+            height: 500px;
+        }
+        .image-section {
+            background: url('C:\Users\hp\Desktop\petadoption\himanshupaggdu.jpeg') no-repeat center center;
+            background-size: cover;
+            width: 40%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-overlay {
+            background-color: rgba(0, 150, 150, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .image-overlay img {
+            width: 200px;
+            margin-top: 25px;
+        }
+        .container {
+            padding: 40px 50px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .title {
+            font-size: 26px;
+            color: #008080;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .links a {
+            color: #008080;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .tabs a {
+            color: #008080;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .register-link {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-section">
+            <div class="image-overlay">
+                <h1><b>Perfect Pawfriend</b></h1>
+                <img src="{{ url_for('static', filename='himanshupaggdu.jpeg') }}" alt="Pets Icon">
+                <img src="" alt="">
+                <h2>We Welcome You,<br>with our open Heart and Paws!</h2>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="title">Login to Continue</h2>
+            <p class="register-link">Don't have an account with us? <a href="{{ url_for('signin') }}">Click here to Register</a>
+            </p>
+            <div class="tabs">
+                <a href="#">Login with Password</a>
+                
+            </div>
+            <input type="text" placeholder="Mobile No. / Email Id" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Log in</button>
+        </div>
+    </div>
+</body>
+</html>

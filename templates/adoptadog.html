@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        body {
+            font-family:cursive;
+            text-align: center;
+            background-image: url('pastelbluebg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .dog {
+            display: inline-block;
+            width: 28%;
+            background: #ffebcd;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .dog:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 6px 16px rgba(0,0,0,0.4);
+        }
+        img {
+            width: 100%;
+            border-radius: 15px;
+            border: 3px solid #ff69b4;
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color:solid #ff69b4 ;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: blue;
+            font-size: 2.5em;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        h3 {
+            color: blue;
+            font-size: 1.5em;
+        }
+        p {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #444;
+        }
+        a {
+            font-size: 1.5em;
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1><a href="dogs.html">Choose your Dog</a></h1>
+    <div class="container">
+       
+        <div class="dog"><img src="{{ url_for('static', filename='notgalidog.jpg') }}" alt="Buddy"><h3>Buddy</h3><p>Age: 3 years</p><h2><p></p></h2></div>
+        <div class="dog"><img src="{{ url_for('static', filename='bernese.jpg') }}" alt="Charlie"><h3>Charlie</h3><p>Age: 2 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='goldenretriever.jpg') }}" alt="Max"><h3>Max</h3><p>Age: 4 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='Affenpinscher.webp') }}" alt="Bella"><h3>Bella</h3><p>Age: 1 year</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='teddy.jpg') }}" alt="Lucy"><h3>Lucy</h3><p>Age: 2 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='afghan-hound.avif') }}" alt="Casy"><h3>Daisy</h3><p>Age: 3 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='beagle.jpg') }}" alt="Copper"><h3>Cooper</h3><p>Age: 4 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='himanshupaggdu.jpeg') }}" alt="Bailey"><h3>Bailey</h3><p>Age: 2 years</p></div>
+        <div class="dog"><img src="{{ url_for('static', filename='loginpuppy.jpeg') }}" alt="MIKO"><h3>Milo</h3><p>Age: 3 years</p></div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption Blog</title>
+    <style>
+        body {
+            font-family:cursive;
+            background-color: #aec6cf; /* Pastel Blue */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: paleturquoise;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            font-size: 2.5em;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        header h1 {
+            font-family: 'Brush Script MT';
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .post {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .post img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .post h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .post p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .post .date {
+            font-size: 1em;
+            color: #888;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5c8b99;
+            color: white;
+            font-size: 1.1em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pet Adoption Blog</h1>
+</header>
+
+<div class="container">
+    <!-- Blog Post 1 -->
+    <div class="post">
+        <img src="{{ url_for('static', filename='maindog.jpg') }}" alt="Dog Adoption">
+        <h2>Why Adopting a Dog is the Best Decision You Can Make</h2>
+        <p class="date">Posted on February 17, 2025</p>
+        <p>Adopting a dog means giving them a second chance at life, and in return, they provide unconditional love and companionship. Whether you are looking for a playful puppy or a calm senior dog, adoption is the way to go. Here’s why adopting a dog should be at the top of your list.</p>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="post">
+        <img src="{{ url_for('static', filename='catss.jpg') }}" alt="Cat Adoption">
+        <h2>The Joy of Adopting a Cat: What You Need to Know</h2>
+        <p class="date">Posted on February 16, 2025</p>
+        <p>Cats are independent, loving, and full of personality. Adopting a cat can bring peace to your home and comfort to your heart. In this post, we explore the perks of adopting a cat and how to make them feel at home.</p>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="post">
+        <img src="{{ url_for('static', filename='carouselphoto.jpg') }}" alt="Pet Adoption Benefits">
+        <h2>Top 5 Benefits of Adopting a Pet</h2>
+        <p class="date">Posted on February 15, 2025</p>
+        <p>Adopting a pet not only saves a life but also brings numerous benefits to your own. From emotional support to health benefits, adopting a pet is one of the most rewarding decisions you can make. Let’s dive into the top 5 reasons to adopt.</p>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="post">
+        <img src="{{ url_for('static', filename='carouselphoto2.jpg') }}" alt="Dog Care">
+        <h2>Essential Care Tips for Your Adopted Dog</h2>
+        <p class="date">Posted on February 14, 2025</p>
+        <p>Adopting a dog is just the first step. Now, it’s important to ensure that they have a safe and happy life with you. In this post, we share essential tips for caring for your adopted dog, from feeding to training.</p>
+    </div>
+
+    

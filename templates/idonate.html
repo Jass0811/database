@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Pet Adoption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .donation-page {
+            padding: 20px;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .hero-image {
+            width: 40%; /* Image takes 40% of the container width */
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .hero-text {
+            flex: 1; /* Text takes the remaining space */
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-family: cursive;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .donation-container {
+            margin-top: 30px;
+        }
+
+        .form-section {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .donation-form input,
+        .donation-form select,
+        .donation-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .donate-button {
+            background-color: #ff6f61;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #ff4c3b;
+        }
+
+        nav {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff6f61;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="donation-page">
+        <!-- Hero Section: Side-by-side image and text -->
+        <div class="hero-section">
+            <img src="{{ url_for('static', filename='money.webp') }}" alt="Adopt a Dog" class="hero-image">
+            <div class="hero-text">
+                <h1>Make a Difference for Animals in Need</h1>
+                <p>
+                    Help provide food, shelter, and medical care to pets waiting for their forever homes.
+                    Every day, animals in our community suffer from neglect, abuse, and homelessness.
+
+                    iAdopt is dedicated to providing the care and support these animals need to thrive.
+
+                    By donating to our cause, you can help make a difference in the lives of these innocent creatures. Your generosity will enable us to continue our work rescuing and rehoming animals, as well as educating the public on the importance of pet adoption.
+
+                    Please consider making a donation today and join us in our mission to create a better world for all dogs and cats.
+                </p>
+            </div>
+        </div>
+
+        <p><a href="{{ url_for('qr') }}">SHOW QR CODE</a></p>
+
+        <!-- Donation Form Section -->
+        <div class="donation-container">
+            <div class="form-section">
+                <h2>Donate Today!</h2>
+                <form action="{{ url_for('idonate') }}" method="POST" class="donation-form">
+                    <label for="amount">Donation Amount</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="upi">UPI</option>
+                    </select>
+
+                    <button type="submit" class="donate-button">Donate Now</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+            <a href="{{ url_for('main') }}">Home</a>
+            <a href="{{ url_for('aboutuspage') }}">About Us</a>
+            <a href="{{ url_for('contactus') }}">Contact</a>
+            <a href="{{ url_for('adoptadog') }}">Adopt a Dog</a>
+            <a href="{{ url_for('adoptacat') }}">Adopt a Cat</a>
+            <a href="{{ url_for('blogpage') }}">Blog</a>
+        </nav>
+    </div>
+</body>
+</html>
